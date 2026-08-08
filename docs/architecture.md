@@ -82,3 +82,16 @@ document-search-platform/
 ├── requirements.txt
 ├── .env.example
 └── README.md
+
+
+Clean Architecture
+
+API Layer
+     │
+Service Layer
+     │
+AI Layer (CrewAI + LlamaIndex)
+     │
+Repository Layer
+     │
+PostgreSQL / PGVector
