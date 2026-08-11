@@ -4,6 +4,7 @@ from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from app.infrastructure.database.base import Base
 
+
 class Document(Base):
 
     __tablename__ = "documents"

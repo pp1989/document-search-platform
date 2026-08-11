@@ -95,3 +95,68 @@ AI Layer (CrewAI + LlamaIndex)
 Repository Layer
      │
 PostgreSQL / PGVector
+
+
+
+FOLDER STRUCTURE:
+app/
+
+api/
+└── v1/
+    └── endpoints/
+        └── upload.py
+
+application/
+├── dto/
+│   ├── upload_request.py
+│   └── upload_response.py
+│
+├── services/
+│   └── upload_service.py
+│
+└── use_cases/
+    └── upload_document.py
+
+domain/
+├── entities/
+│   └── document.py
+│
+├── enums/
+│   └── document_status.py
+│
+├── repositories/
+│   └── document_repository.py
+│
+├── ports/
+│   ├── file_storage.py
+│   ├── checksum.py
+│   └── clock.py
+│
+└── exceptions/
+    ├── duplicate_document.py
+    └── invalid_document.py
+
+infrastructure/
+
+├── storage/
+│   └── local_storage.py
+│
+├── checksum/
+│   └── sha256_service.py
+│
+├── repositories/
+│   └── postgres_document_repository.py
+│
+└── database/
+    └── models/
+        └── document_model.py
+
+tests/
+
+├── unit/
+│   ├── upload_service_test.py
+│   ├── checksum_test.py
+│   └── storage_test.py
+│
+└── integration/
+    └── upload_api_test.py
