@@ -5,7 +5,7 @@ from sqlalchemy.dialects.postgresql import JSONB
 
 from pgvector.sqlalchemy import Vector
 
-from app.infrastructure.database.base import Base
+from app.infrastructure.persistence.base import Base
 
 
 class DocumentChunk(Base):

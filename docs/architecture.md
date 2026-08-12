@@ -159,4 +159,70 @@ tests/
 │   └── storage_test.py
 │
 └── integration/
-    └── upload_api_test.py
+    └── upload_api_test.
+    
+
+
+
+    final architecture will be:
+
+app/
+│
+├── api/
+├── application/
+├── domain/
+├── infrastructure/
+├── core/
+├── agents/
+├── rag/
+├── evaluation/
+└── observability/
+
+
+
+Domain Folder Architecture
+                Upload Service
+
+                      │
+
+      ┌───────────────┼───────────────┐
+
+      ▼               ▼               ▼
+
+Repository      FileStorage     Checksum
+
+      ▲               ▲               ▲
+
+      │               │               │
+
+     Domain Contracts (Interfaces)
+
+
+
+     Upload file Architecture: 
+     
+                 Upload Service
+
+                        │
+
+                        ▼
+
+                 Document Entity
+
+                        │
+
+                        ▼
+
+                DocumentMapper
+
+             ┌──────────┴──────────┐
+
+             ▼                     ▼
+
+      DocumentModel          SQLAlchemy
+
+                                     │
+
+                                     ▼
+
+                                PostgreSQL

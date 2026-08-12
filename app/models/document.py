@@ -2,7 +2,7 @@ from datetime import datetime
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
-from app.infrastructure.database.base import Base
+from app.infrastructure.persistence.base import Base
 
 
 class Document(Base):
